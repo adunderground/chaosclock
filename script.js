@@ -135,7 +135,7 @@ stopBtn.addEventListener('click', () => {
 
 
 //old event listeners
-
+/*
 timeBtn.addEventListener('click', () => {
   //apply highlighted effect if the button is pressed
   timeBtn.classList.toggle('btn-active');
@@ -167,4 +167,4 @@ cleanBtn.addEventListener('click', () => {
   cleanUp();
 });
 
-
+*/
