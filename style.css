@@ -1,0 +1,232 @@
+:root {
+  --magneta: #e1287e;
+  --pink: #f34f85;
+  --blue: #081693;
+  --purple: #745399;
+  --grey: #848ca4;
+  --darkgrey: #242c44;
+}
+
+@font-face {
+  font-family: digiFont;
+  src: url(DS-DIGI.TTF);
+}
+
+@font-face {
+  font-family: digiBFont;
+  src: url(DS-DIGIB.TTF);
+}
+
+body {
+  margin: 40px;
+  min-height: 100vh;
+  background: #000;
+
+  font-family: digiFont;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.display-container {
+  margin: 5rem;
+  width: 80%;
+  padding: 2vw;
+  border: 5px solid lighten(#ff0000, 30%);
+
+  border-radius: 60px;
+  transform: skewX(-3deg);
+  animation: flicker 10s linear infinite;
+}
+
+[data-hour^='1'] .digit-1 [class*='1'],
+[data-hour^='2'] .digit-1 [class*='2'],
+[data-hour^='3'] .digit-1 [class*='3'],
+[data-hour^='4'] .digit-1 [class*='4'],
+[data-hour^='5'] .digit-1 [class*='5'],
+[data-hour^='6'] .digit-1 [class*='6'],
+[data-hour^='7'] .digit-1 [class*='7'],
+[data-hour^='8'] .digit-1 [class*='8'],
+[data-hour^='9'] .digit-1 [class*='9'],
+[data-hour^='0'] .digit-1 [class*='0'],
+[data-hour$='1'] .digit-2 [class*='1'],
+[data-hour$='2'] .digit-2 [class*='2'],
+[data-hour$='3'] .digit-2 [class*='3'],
+[data-hour$='4'] .digit-2 [class*='4'],
+[data-hour$='5'] .digit-2 [class*='5'],
+[data-hour$='6'] .digit-2 [class*='6'],
+[data-hour$='7'] .digit-2 [class*='7'],
+[data-hour$='8'] .digit-2 [class*='8'],
+[data-hour$='9'] .digit-2 [class*='9'],
+[data-hour$='0'] .digit-2 [class*='0'],
+[data-minute^='1'] .digit-3 [class*='1'],
+[data-minute^='2'] .digit-3 [class*='2'],
+[data-minute^='3'] .digit-3 [class*='3'],
+[data-minute^='4'] .digit-3 [class*='4'],
+[data-minute^='5'] .digit-3 [class*='5'],
+[data-minute^='6'] .digit-3 [class*='6'],
+[data-minute^='7'] .digit-3 [class*='7'],
+[data-minute^='8'] .digit-3 [class*='8'],
+[data-minute^='9'] .digit-3 [class*='9'],
+[data-minute^='0'] .digit-3 [class*='0'],
+[data-minute$='1'] .digit-4 [class*='1'],
+[data-minute$='2'] .digit-4 [class*='2'],
+[data-minute$='3'] .digit-4 [class*='3'],
+[data-minute$='4'] .digit-4 [class*='4'],
+[data-minute$='5'] .digit-4 [class*='5'],
+[data-minute$='6'] .digit-4 [class*='6'],
+[data-minute$='7'] .digit-4 [class*='7'],
+[data-minute$='8'] .digit-4 [class*='8'],
+[data-minute$='9'] .digit-4 [class*='9'],
+[data-minute$='0'] .digit-4 [class*='0'],
+[data-second^='1'] .digit-5 [class*='1'],
+[data-second^='2'] .digit-5 [class*='2'],
+[data-second^='3'] .digit-5 [class*='3'],
+[data-second^='4'] .digit-5 [class*='4'],
+[data-second^='5'] .digit-5 [class*='5'],
+[data-second^='6'] .digit-5 [class*='6'],
+[data-second^='7'] .digit-5 [class*='7'],
+[data-second^='8'] .digit-5 [class*='8'],
+[data-second^='9'] .digit-5 [class*='9'],
+[data-second^='0'] .digit-5 [class*='0'],
+[data-second$='1'] .digit-6 [class*='1'],
+[data-second$='2'] .digit-6 [class*='2'],
+[data-second$='3'] .digit-6 [class*='3'],
+[data-second$='4'] .digit-6 [class*='4'],
+[data-second$='5'] .digit-6 [class*='5'],
+[data-second$='6'] .digit-6 [class*='6'],
+[data-second$='7'] .digit-6 [class*='7'],
+[data-second$='8'] .digit-6 [class*='8'],
+[data-second$='9'] .digit-6 [class*='9'],
+[data-second$='0'] .digit-6 [class*='0'],
+.active {
+  fill: #ff0000;
+}
+
+.dots,
+.digit {
+  /* fill: rgb(255, 0, 0, 0.1); */
+  fill: #242c447c;
+}
+
+svg {
+  margin: 2vw;
+  overflow: hidden;
+}
+
+.button-container {
+  z-index: 20;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  background: #000;
+}
+
+button {
+  font-family: digiFont;
+  background-color: #000;
+  margin: 2rem;
+  padding: 0.5rem 1rem;
+  color: red;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-size: 2rem;
+  overflow: hidden;
+}
+
+button:hover {
+  color: rgb(170, 7, 7);
+  background: #000;
+  box-shadow: 0 0 10px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
+  animation: flicker-btn 3.11s linear infinite;
+}
+
+button:active {
+  color: red;
+  background: #000;
+  box-shadow: 0 0 10px #242c447c, 0 0 40px #242c447c, 0 0 80px #242c447c;
+}
+
+/* frame animation */
+@keyframes flicker {
+  0%,
+  21.5%,
+  22%,
+  23.5%,
+  24%,
+  66.5%,
+  72.3%,
+  84.5%,
+  85%,
+  100% {
+    box-shadow: 0 0 90px rgb(255, 0, 0), 0 0 40px red inset;
+  }
+  21.8%,
+  23.8%,
+  66.8%,
+  84.8% {
+    box-shadow: 0 0 90px rgb(200, 24, 0), 0 0 40px rgb(200, 24, 0) inset;
+  }
+}
+
+@keyframes flicker-btn {
+  0%,
+  4%,
+  4.4%,
+  12%,
+  13%,
+  21.5%,
+  22%,
+  23.5%,
+  24%,
+  66.5%,
+  67%,
+  84.5%,
+  85%,
+  100% {
+    box-shadow: 0 0 40px rgb(255, 0, 0), 0 0 20px red;
+  }
+  4.1%,
+  12.5%,
+  21.8%,
+  23.8%,
+  66.8%,
+  84.8% {
+    box-shadow: 0 0 10px rgb(200, 24, 0), 0 0 20px rgb(200, 24, 0);
+  }
+}
+
+.scanlines {
+  pointer-events: none;
+  z-index: -100;
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+.scanlines::before {
+  pointer-events: none;
+  z-index: -100;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 0.5%,
+    transparent 1%
+  );
+}
+
+@media (max-width: 400px) {
+  .button-container {
+    flex-flow: column;
+    justify-content: center;
+  }
+}
