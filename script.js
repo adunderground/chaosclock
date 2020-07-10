@@ -8,6 +8,8 @@ const chaosBtn = document.getElementById('chaosBtn');
 const stopBtn = document.getElementById('stopBtn');
 const cleanBtn = document.getElementById('cleanBtn');
 const displayBtn = document.getElementById('displayBtn');
+const colorPicker = document.getElementById('colorPicker');
+
 
 let displayMode = displayBtn.textContent;
 
@@ -133,9 +135,15 @@ stopBtn.addEventListener('click', () => {
   // cleanUp();
 });
 
+colorPicker.addEventListener("change", ()=>{
+  document.documentElement.style
+    .setProperty('--active', event.target.value);
+  // document.body.style.background = event.target.value;
+});
+
 
 //old event listeners
-
+/*
 timeBtn.addEventListener('click', () => {
   //apply highlighted effect if the button is pressed
   timeBtn.classList.toggle('btn-active');
@@ -168,3 +176,4 @@ cleanBtn.addEventListener('click', () => {
 });
 
 
+*/

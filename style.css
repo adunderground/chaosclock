@@ -5,6 +5,8 @@
   --purple: #745399;
   --grey: #848ca4;
   --darkgrey: #242c44;
+
+  --active:#ff0000;
 }
 
 @font-face {
@@ -36,7 +38,7 @@ body {
   margin: 5rem;
   width: 80%;
   padding: 2vw;
-  border: 5px solid lighten(#ff0000, 30%);
+  border: 5px solid lighten(var(--active), 30%);
 
   border-radius: 60px;
   transform: skewX(-3deg);
@@ -104,7 +106,7 @@ body {
 [data-second$='9'] .digit-6 [class*='9'],
 [data-second$='0'] .digit-6 [class*='0'],
 .active {
-  fill: #ff0000;
+  fill: var(--active);
 }
 
 .dots,
@@ -131,7 +133,7 @@ button {
   background-color: #000;
   margin: 2rem;
   padding: 0.5rem 1rem;
-  color: red;
+  color: var(--active);
   font-weight: 700;
   letter-spacing: 4px;
   font-size: 2rem;
@@ -146,7 +148,7 @@ button:hover {
 }
 
 button:active {
-  color: red;
+  color: var(--active);
   background: #000;
   box-shadow: 0 0 10px #242c447c, 0 0 40px #242c447c, 0 0 80px #242c447c;
 }
@@ -163,13 +165,13 @@ button:active {
   84.5%,
   85%,
   100% {
-    box-shadow: 0 0 90px rgb(255, 0, 0), 0 0 40px red inset;
+    box-shadow: 0 0 90px var(--active), 0 0 40px var(--active) inset;
   }
   21.8%,
   23.8%,
   66.8%,
   84.8% {
-    box-shadow: 0 0 90px rgb(200, 24, 0), 0 0 40px rgb(200, 24, 0) inset;
+    box-shadow: 0 0 90px var(--active), 0 0 40px var(--active) inset;
   }
 }
 
@@ -188,7 +190,7 @@ button:active {
   84.5%,
   85%,
   100% {
-    box-shadow: 0 0 40px rgb(255, 0, 0), 0 0 20px red;
+    box-shadow: 0 0 40px var(--active), 0 0 20px var(--active);
   }
   4.1%,
   12.5%,
@@ -196,7 +198,7 @@ button:active {
   23.8%,
   66.8%,
   84.8% {
-    box-shadow: 0 0 10px rgb(200, 24, 0), 0 0 20px rgb(200, 24, 0);
+    box-shadow: 0 0 10px var(--active), 0 0 20px var(--active);
   }
 }
 
