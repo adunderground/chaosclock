@@ -171,7 +171,7 @@ button:active {
   23.8%,
   66.8%,
   84.8% {
-    box-shadow: 0 0 90px var(--active), 0 0 40px var(--active) inset;
+    box-shadow: 0 0 40px var(--active), 0 0 20px var(--active) inset;
   }
 }
 
