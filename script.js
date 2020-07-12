@@ -135,7 +135,7 @@ stopBtn.addEventListener('click', () => {
   // cleanUp();
 });
 
-colorPicker.addEventListener("change", ()=>{
+colorPicker.addEventListener('input', ()=>{
   document.documentElement.style
     .setProperty('--active', event.target.value);
   // document.body.style.background = event.target.value;
