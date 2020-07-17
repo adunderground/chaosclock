@@ -34,7 +34,7 @@ body {
 }
 
 .display-container {
-  margin: 5rem;
+  margin-top: 3rem;
   width: 80%;
   padding: 2vw;
   border: 5px solid lighten(var(--active), 30%);

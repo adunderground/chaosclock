@@ -115,7 +115,10 @@ function cleanUp() {
   document.querySelector('svg').setAttribute('data-second', '');
 }
 
+
 // EVENT LISTENERS
+
+// display btn
 displayBtn.addEventListener('click', () => {
   stopDisplay();
   display();
@@ -128,17 +131,19 @@ displayBtn.addEventListener('click', () => {
   }
 });
 
-// STOP ALL BUTTON
+// stop btn
 stopBtn.addEventListener('click', () => {
   console.log('Stopping...');
   stopDisplay();
   // cleanUp();
 });
 
+// color picker
 colorPicker.addEventListener('input', ()=>{
   document.documentElement.style
     .setProperty('--active', event.target.value);
-  // document.body.style.background = event.target.value;
+  // hex color
+    console.log(event.target.value);
 });
 
 
@@ -175,5 +180,6 @@ cleanBtn.addEventListener('click', () => {
   cleanUp();
 });
 
-
 */
+
+
