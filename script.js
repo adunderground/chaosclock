@@ -1,7 +1,3 @@
-//state variables
-let timeIsDisplaying = false;
-let intervalId = 0;
-
 //DOM hooks
 const timeBtn = document.getElementById('timeBtn');
 const chaosBtn = document.getElementById('chaosBtn');
@@ -10,7 +6,9 @@ const cleanBtn = document.getElementById('cleanBtn');
 const displayBtn = document.getElementById('displayBtn');
 const colorPicker = document.getElementById('colorPicker');
 
-
+//state variables
+let timeHasBeenDisplaying = false;
+let intervalId = 0;
 let displayMode = displayBtn.textContent;
 
 function display() {
@@ -44,7 +42,7 @@ function stopDisplay() {
 }
 
 function startTime() {
-  timeIsDisplaying = true;
+  timeHasBeenDisplaying = true;
   function checkTime(i) {
     return i < 10 ? '0' + i : i;
   }
@@ -120,6 +118,7 @@ function cleanUp() {
 
 // display btn
 displayBtn.addEventListener('click', () => {
+  cleanUp();
   stopDisplay();
   display();
   if (displayMode === 'Clock') {
@@ -138,14 +137,34 @@ stopBtn.addEventListener('click', () => {
   // cleanUp();
 });
 
+// Hoover text change
+displayBtn.addEventListener('mouseover', () =>{
+  if(timeHasBeenDisplaying){
+    displayBtn.style.animationDuration = "0.1s"
+    displayBtn.textContent === 'Clock'? displayBtn.textContent = 'Chaos' : displayBtn.textContent = 'Clock';
+  }
+})
+displayBtn.addEventListener('mouseleave', () =>{
+  if(timeHasBeenDisplaying){
+    displayBtn.style.animationDuration = "3.11s"
+    displayBtn.textContent === 'Chaos'? displayBtn.textContent = 'Clock' : displayBtn.textContent = 'Chaos';
+  }
+})
+
+
 // color picker
 colorPicker.addEventListener('input', ()=>{
   document.documentElement.style
-    .setProperty('--active', event.target.value);
-  // hex color
-    console.log(event.target.value);
+    .setProperty('--chaos', event.target.value);
+    // hex color
+    // console.log(event.target.value);
 });
 
+//secret setting to set the clock to the selected color
+colorPicker.addEventListener('dblclick', ()=>{
+  document.documentElement.style
+    .setProperty('--order-clock', event.target.value);
+})
 
 //old event listeners
 /*
