@@ -1,11 +1,11 @@
 :root {
   /* dynamic chaos */
-  --chaos: #e81b23;  
+  --chaos: #e81b23;
   /* static order  */
   --order: #e81b23;
   --order-clock: #e81b23;
   /* inverted chaos */
-  --inverted:#17e4dc;
+  /* --inverted:#17e4dc; */
 }
 
 @font-face {
@@ -13,156 +13,157 @@
   src: url(DS-DIGI.TTF);
   font-display: swap;
 }
-      /*css reset*/
-      html,
-      body,
-      div,
-      span,
-      applet,
-      object,
-      iframe,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p,
-      blockquote,
-      pre,
-      a,
-      abbr,
-      acronym,
-      address,
-      big,
-      cite,
-      code,
-      del,
-      dfn,
-      em,
-      img,
-      ins,
-      kbd,
-      q,
-      s,
-      samp,
-      small,
-      strike,
-      strong,
-      sub,
-      sup,
-      tt,
-      var,
-      b,
-      u,
-      i,
-      center,
-      dl,
-      dt,
-      dd,
-      ol,
-      ul,
-      li,
-      fieldset,
-      form,
-      label,
-      legend,
-      table,
-      caption,
-      tbody,
-      tfoot,
-      thead,
-      tr,
-      th,
-      td,
-      article,
-      aside,
-      canvas,
-      details,
-      embed,
-      figure,
-      figcaption,
-      footer,
-      header,
-      hgroup,
-      menu,
-      nav,
-      output,
-      ruby,
-      section,
-      summary,
-      time,
-      mark,
-      audio,
-      video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-      }
+/*css reset*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-[data-hour^="1"] .digit-1 [class*="1"],
-[data-hour^="2"] .digit-1 [class*="2"],
-[data-hour^="3"] .digit-1 [class*="3"],
-[data-hour^="4"] .digit-1 [class*="4"],
-[data-hour^="5"] .digit-1 [class*="5"],
-[data-hour^="6"] .digit-1 [class*="6"],
-[data-hour^="7"] .digit-1 [class*="7"],
-[data-hour^="8"] .digit-1 [class*="8"],
-[data-hour^="9"] .digit-1 [class*="9"],
-[data-hour^="0"] .digit-1 [class*="0"],
-[data-hour$="1"] .digit-2 [class*="1"],
-[data-hour$="2"] .digit-2 [class*="2"],
-[data-hour$="3"] .digit-2 [class*="3"],
-[data-hour$="4"] .digit-2 [class*="4"],
-[data-hour$="5"] .digit-2 [class*="5"],
-[data-hour$="6"] .digit-2 [class*="6"],
-[data-hour$="7"] .digit-2 [class*="7"],
-[data-hour$="8"] .digit-2 [class*="8"],
-[data-hour$="9"] .digit-2 [class*="9"],
-[data-hour$="0"] .digit-2 [class*="0"],
-[data-minute^="1"] .digit-3 [class*="1"],
-[data-minute^="2"] .digit-3 [class*="2"],
-[data-minute^="3"] .digit-3 [class*="3"],
-[data-minute^="4"] .digit-3 [class*="4"],
-[data-minute^="5"] .digit-3 [class*="5"],
-[data-minute^="6"] .digit-3 [class*="6"],
-[data-minute^="7"] .digit-3 [class*="7"],
-[data-minute^="8"] .digit-3 [class*="8"],
-[data-minute^="9"] .digit-3 [class*="9"],
-[data-minute^="0"] .digit-3 [class*="0"],
-[data-minute$="1"] .digit-4 [class*="1"],
-[data-minute$="2"] .digit-4 [class*="2"],
-[data-minute$="3"] .digit-4 [class*="3"],
-[data-minute$="4"] .digit-4 [class*="4"],
-[data-minute$="5"] .digit-4 [class*="5"],
-[data-minute$="6"] .digit-4 [class*="6"],
-[data-minute$="7"] .digit-4 [class*="7"],
-[data-minute$="8"] .digit-4 [class*="8"],
-[data-minute$="9"] .digit-4 [class*="9"],
-[data-minute$="0"] .digit-4 [class*="0"],
-[data-second^="1"] .digit-5 [class*="1"],
-[data-second^="2"] .digit-5 [class*="2"],
-[data-second^="3"] .digit-5 [class*="3"],
-[data-second^="4"] .digit-5 [class*="4"],
-[data-second^="5"] .digit-5 [class*="5"],
-[data-second^="6"] .digit-5 [class*="6"],
-[data-second^="7"] .digit-5 [class*="7"],
-[data-second^="8"] .digit-5 [class*="8"],
-[data-second^="9"] .digit-5 [class*="9"],
-[data-second^="0"] .digit-5 [class*="0"],
-[data-second$="1"] .digit-6 [class*="1"],
-[data-second$="2"] .digit-6 [class*="2"],
-[data-second$="3"] .digit-6 [class*="3"],
-[data-second$="4"] .digit-6 [class*="4"],
-[data-second$="5"] .digit-6 [class*="5"],
-[data-second$="6"] .digit-6 [class*="6"],
-[data-second$="7"] .digit-6 [class*="7"],
-[data-second$="8"] .digit-6 [class*="8"],
-[data-second$="9"] .digit-6 [class*="9"],
-[data-second$="0"] .digit-6 [class*="0"],
+[data-hour^='1'] .digit-1 [class*='1'],
+[data-hour^='2'] .digit-1 [class*='2'],
+[data-hour^='3'] .digit-1 [class*='3'],
+[data-hour^='4'] .digit-1 [class*='4'],
+[data-hour^='5'] .digit-1 [class*='5'],
+[data-hour^='6'] .digit-1 [class*='6'],
+[data-hour^='7'] .digit-1 [class*='7'],
+[data-hour^='8'] .digit-1 [class*='8'],
+[data-hour^='9'] .digit-1 [class*='9'],
+[data-hour^='0'] .digit-1 [class*='0'],
+[data-hour$='1'] .digit-2 [class*='1'],
+[data-hour$='2'] .digit-2 [class*='2'],
+[data-hour$='3'] .digit-2 [class*='3'],
+[data-hour$='4'] .digit-2 [class*='4'],
+[data-hour$='5'] .digit-2 [class*='5'],
+[data-hour$='6'] .digit-2 [class*='6'],
+[data-hour$='7'] .digit-2 [class*='7'],
+[data-hour$='8'] .digit-2 [class*='8'],
+[data-hour$='9'] .digit-2 [class*='9'],
+[data-hour$='0'] .digit-2 [class*='0'],
+[data-minute^='1'] .digit-3 [class*='1'],
+[data-minute^='2'] .digit-3 [class*='2'],
+[data-minute^='3'] .digit-3 [class*='3'],
+[data-minute^='4'] .digit-3 [class*='4'],
+[data-minute^='5'] .digit-3 [class*='5'],
+[data-minute^='6'] .digit-3 [class*='6'],
+[data-minute^='7'] .digit-3 [class*='7'],
+[data-minute^='8'] .digit-3 [class*='8'],
+[data-minute^='9'] .digit-3 [class*='9'],
+[data-minute^='0'] .digit-3 [class*='0'],
+[data-minute$='1'] .digit-4 [class*='1'],
+[data-minute$='2'] .digit-4 [class*='2'],
+[data-minute$='3'] .digit-4 [class*='3'],
+[data-minute$='4'] .digit-4 [class*='4'],
+[data-minute$='5'] .digit-4 [class*='5'],
+[data-minute$='6'] .digit-4 [class*='6'],
+[data-minute$='7'] .digit-4 [class*='7'],
+[data-minute$='8'] .digit-4 [class*='8'],
+[data-minute$='9'] .digit-4 [class*='9'],
+[data-minute$='0'] .digit-4 [class*='0'],
+[data-second^='1'] .digit-5 [class*='1'],
+[data-second^='2'] .digit-5 [class*='2'],
+[data-second^='3'] .digit-5 [class*='3'],
+[data-second^='4'] .digit-5 [class*='4'],
+[data-second^='5'] .digit-5 [class*='5'],
+[data-second^='6'] .digit-5 [class*='6'],
+[data-second^='7'] .digit-5 [class*='7'],
+[data-second^='8'] .digit-5 [class*='8'],
+[data-second^='9'] .digit-5 [class*='9'],
+[data-second^='0'] .digit-5 [class*='0'],
+[data-second$='1'] .digit-6 [class*='1'],
+[data-second$='2'] .digit-6 [class*='2'],
+[data-second$='3'] .digit-6 [class*='3'],
+[data-second$='4'] .digit-6 [class*='4'],
+[data-second$='5'] .digit-6 [class*='5'],
+[data-second$='6'] .digit-6 [class*='6'],
+[data-second$='7'] .digit-6 [class*='7'],
+[data-second$='8'] .digit-6 [class*='8'],
+[data-second$='9'] .digit-6 [class*='9'],
+[data-second$='0'] .digit-6 [class*='0'],
+.dots,
 .active {
   fill: var(--order-clock);
 }
@@ -170,6 +171,10 @@
 .dots,
 .digit {
   fill: #242c447c;
+}
+
+.dots > .active {
+  animation: flicker 100s linear infinite;
 }
 
 svg {
@@ -183,7 +188,6 @@ body {
   min-height: 100vh;
   background: #000;
   font-family: digiFont;
-  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -289,9 +293,9 @@ button:active {
   95.5%,
   96.8%,
   97%,
-  98%
-  {
+  98% {
     box-shadow: 0 0 90px var(--chaos), 0 0 40px var(--chaos) inset;
+    fill: var(--chaos);
   }
   4.47%,
   6.7%,
@@ -310,17 +314,15 @@ button:active {
   93.5%,
   94.5%,
   95.1%,
-  97.9%
-  {
+  97.9% {
     box-shadow: 0 0 40px #000, 0 0 20px #000 inset;
+    fill: #242c447c;
   }
 
-  99.5%
-  {
-    box-shadow: 0 0 100px var(--chaos), 0 0 300px var(--chaos)  inset;
+  99.5% {
+    box-shadow: 0 0 100px var(--chaos), 0 0 300px var(--chaos) inset;
   }
-  0%
-  {
+  0% {
     box-shadow: 0 0 300px var(--chaos), 0 0 600px var(--chaos) inset;
   }
 }
@@ -389,7 +391,7 @@ button:active {
 .scanlines::before {
   pointer-events: none;
   z-index: -1;
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
