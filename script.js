@@ -42,6 +42,8 @@ function stopDisplay() {
 }
 
 function startTime() {
+  document.querySelectorAll('.dots > rect').forEach((el) => el.classList.add('active'));
+  
   timeHasBeenDisplaying = true;
   function checkTime(i) {
     return i < 10 ? '0' + i : i;
@@ -92,9 +94,7 @@ function startChaos() {
   if (randomDots.dotsActive) {
     for (let i = 0; i < randomDots.numberOfDots; i++) {
       let randomIndex = Math.round(Math.random() * 3);
-      document
-        .querySelector('.dots')
-        .children[randomIndex].classList.add('active');
+      document.querySelector('.dots').children[randomIndex].classList.add('active');
     }
   }
 }
@@ -112,7 +112,6 @@ function cleanUp() {
   document.querySelector('svg').setAttribute('data-minute', '');
   document.querySelector('svg').setAttribute('data-second', '');
 }
-
 
 // EVENT LISTENERS
 
@@ -132,39 +131,33 @@ displayBtn.addEventListener('click', () => {
 
 // stop btn
 stopBtn.addEventListener('click', () => {
-  console.log('Stopping...');
   stopDisplay();
   // cleanUp();
 });
 
 // Hoover text change
-displayBtn.addEventListener('mouseover', () =>{
-  if(timeHasBeenDisplaying){
-    displayBtn.style.animationDuration = "0.1s"
-    displayBtn.textContent === 'Clock'? displayBtn.textContent = 'Chaos' : displayBtn.textContent = 'Clock';
-  }
-})
-displayBtn.addEventListener('mouseleave', () =>{
-  if(timeHasBeenDisplaying){
-    displayBtn.style.animationDuration = "3.11s"
-    displayBtn.textContent === 'Chaos'? displayBtn.textContent = 'Clock' : displayBtn.textContent = 'Chaos';
-  }
-})
-
+// displayBtn.addEventListener('mouseover', () => {
+//   if (timeHasBeenDisplaying) {
+//     displayBtn.style.animationDuration = '0.1s';
+//     displayBtn.textContent === 'Clock' ? (displayBtn.textContent = 'Chaos') : (displayBtn.textContent = 'Clock');
+//   }
+// });
+// displayBtn.addEventListener('mouseleave', () => {
+//   if (timeHasBeenDisplaying) {
+//     displayBtn.style.animationDuration = '3.11s';
+//     displayBtn.textContent === 'Chaos' ? (displayBtn.textContent = 'Clock') : (displayBtn.textContent = 'Chaos');
+//   }
+// });
 
 // color picker
-colorPicker.addEventListener('input', ()=>{
-  document.documentElement.style
-    .setProperty('--chaos', event.target.value);
-    // hex color
-    // console.log(event.target.value);
+colorPicker.addEventListener('input', () => {
+  document.documentElement.style.setProperty('--chaos', event.target.value);
 });
 
 //secret setting to set the clock to the selected color
-colorPicker.addEventListener('dblclick', ()=>{
-  document.documentElement.style
-    .setProperty('--order-clock', event.target.value);
-})
+colorPicker.addEventListener('dblclick', () => {
+  document.documentElement.style.setProperty('--order-clock', event.target.value);
+});
 
 //old event listeners
 /*
@@ -200,5 +193,3 @@ cleanBtn.addEventListener('click', () => {
 });
 
 */
-
-
